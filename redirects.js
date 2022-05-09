@@ -1,0 +1,1 @@
+open('cider://' + window.location.href)

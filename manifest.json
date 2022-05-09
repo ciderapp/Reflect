@@ -1,0 +1,36 @@
+{
+	"manifest_version": 2,
+	"name": "Reflect",
+	"description": "An extension that allows users to redirect Apple Music Web URL's to open in Cider.",
+	"version": "0.0.1",
+	"icons": {
+		"64": "icons/icon.png"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.music.apple.com/*"
+			],
+			"js": [
+				"functions.js"
+			]
+		}
+	],
+	"browser_action": {
+		"default_icon": {
+			"64": "icons/icon.png"
+		},
+		"default_popup": "browserAction/index.html",
+		"default_title": "Reflect"
+	},
+	"page_action": {
+		"default_icon": {
+			"64": "icons/icon.png"
+		},
+		"default_popup": "pageAction/index.html",
+		"default_title": "Reflect"
+	},
+	"options_ui": {
+		"page": "options/index.html"
+	}
+}
